@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.MuiInputBase-input {
+  color: white !important;
+}
+
+.MuiInputLabel-animated {
+  color: #3f51b5 !important;
+}
+
+.form__searchButton {
+  color: white !important;
+}

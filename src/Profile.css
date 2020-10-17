@@ -1,0 +1,65 @@
+.profile {
+  background-image: linear-gradient(
+    to bottom right,
+    #5020b0,
+    #4f2f8c
+  );
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: row;
+  padding: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.profile__avatar {
+  width: 130px;
+  border-radius: 100%;
+  box-shadow: 0 0 10px #111129;
+  object-fit: contain;
+  margin-right: 30px;
+}
+
+.profile__name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.profile__amount {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.profile__repos {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile__repos p {
+  margin: 5px;
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: #2d2d6c;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.17s ease;
+}
+
+.profile__repos p:hover {
+  background-color: white;
+  color: #2d2d6c;
+  box-shadow: 0 0 10px #1a1a3a;
+}
+
+.profile__repos p::selection {
+  background: none;
+}
