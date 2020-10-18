@@ -1,17 +1,37 @@
 import React, { useState } from "react";
 import "./Profile.css";
 
-function Profile({ data }) {
+function Profile({ repos, data }) {
+  const enterAccount = () => {
+    window.open(
+      `https://github.com/${data.name}`,
+      "_blank"
+    );
+  };
+
+  const enterRepo = (repo) => {
+    window.open(
+      `https://github.com/${data.name}/${repo}`,
+      "_blank"
+    );
+  };
+
   const profile = data.name ? (
     <>
       <div className="profile__avatarWrapper">
         <img
+          onClick={enterAccount}
           className="profile__avatar"
           src={data.avatar_url}
         />
       </div>
       <div className="profile__about">
-        <h2 className="profile__name">{data.name}</h2>
+        <h2
+          onClick={enterAccount}
+          className="profile__name"
+        >
+          {data.name}
+        </h2>
         <p className="profile__bio">{data.bio}</p>
 
         <div className="profile__amount">
@@ -31,19 +51,14 @@ function Profile({ data }) {
         </p>
 
         <div className="profile__repos">
-          <p>Repo1</p>
-          <p>Repo2</p>
-          <p>Repo3</p>
-          <p>Repo4</p>
-          <p>Repo5</p>
-          <p>Repo6</p>
-          <p>Repo7</p>
-          <p>Repo8</p>
-          <p>Repo9</p>
-          <p>Repo10</p>
-          <p>Repo11</p>
-          <p>Repo12</p>
-          <p>Repo13</p>
+          {repos.map((repo) => (
+            <p
+              onClick={() => enterRepo(repo)}
+              key={Math.random()}
+            >
+              {repo}
+            </p>
+          ))}
         </div>
       </div>
     </>

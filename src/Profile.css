@@ -4,26 +4,42 @@
     #5020b0,
     #4f2f8c
   );
-  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: row;
-  padding: 30px;
+  padding: 50px;
   border-radius: 20px;
-  overflow: hidden;
+  width: 500px;
 }
 
 .profile__avatar {
   width: 130px;
   border-radius: 100%;
-  box-shadow: 0 0 10px #111129;
   object-fit: contain;
   margin-right: 30px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 5px #111129;
+}
+
+.profile__avatar:hover {
+  box-shadow: 0 0 10px #111129;
+  transform: scale(1.04);
 }
 
 .profile__name {
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  text-shadow: 0 0 5px #111129;
+}
+
+.profile__name:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 10px #111129;
+  transform: scale(1.03);
+  margin-left: 3px;
 }
 
 p {
@@ -35,7 +51,7 @@ p {
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  min-width: 300px;
 }
 
 .profile__repos {
